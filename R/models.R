@@ -2,7 +2,7 @@ library(tidyverse)
 library(poLCA)
 library(foreach)
 
-# Estimate LC models with different number of classes
+#' Estimate LC models with different number of classes
 
 
 #' this function takes the maximum number of classes one wants to run

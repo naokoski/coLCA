@@ -2,7 +2,8 @@
 % Please edit documentation in R/models.R
 \name{models}
 \alias{models}
-\title{this function takes the maximum number of classes one wants to run
+\title{Estimate LC models with different number of classes
+this function takes the maximum number of classes one wants to run
 then runs models from 1 class to the maximum amount of classes
 outputs the result as a list
 user needs to define the model, maximum iterations and number of repetitions
@@ -25,6 +26,7 @@ models(data, k, formula, maxiter, nrep)
 A list
 }
 \description{
+Estimate LC models with different number of classes
 this function takes the maximum number of classes one wants to run
 then runs models from 1 class to the maximum amount of classes
 outputs the result as a list
