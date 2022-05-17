@@ -1,7 +1,3 @@
-library(tidyverse)
-library(poLCA)
-library(foreach)
-
 #' Estimate LC models with different number of classes
 
 
