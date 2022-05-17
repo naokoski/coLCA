@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# coLCA
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of coLCA is to create some additional functionality for the poLCA package. It provides functions to calculate additional information criteria (consistent AIC and sample-adjusted BIC), a different measure of entropy. Also, a convenience function to estimate all required LC models (with all user-defined number of classes) and output the model selection criteria in a tidy table. 
+
+## Installation
+
+You can install the development version of coLCA from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("naokoski/coLCA")
+```
+
+## Usage
+
+There are a number of information criteria addtitional to the most commonly known AIC and BIC that should be used under different circumstances. Two additional criteria calculated with this package are the consistent Akaike Information Criterion (cAIC) and the sample-adjusted Bayesian Information Criterion (aBIC). An additional measure of model fit - the Lo-Mendel-Rubio Likelihood Ratio Test is also calculated as well as a more commonly used measure of entropy. Finally two convenience functions: one to estimate all LC models needed using only one call and a second one to output all the statistical criteria for model selection in one table.
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+#library(coLCA)
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
