@@ -28,9 +28,16 @@ library(foreach)
 #' repeated 10 times.
 #' models(data, 4, f, 5000, 10)
 
-models <- function(data, k, formula, maxiter, nrep) {
+models <- function(formula, data, k,
+                   maxiter, graphs,
+                   tol, na.rm,
+                   probs.start, nrep,
+                   verbose, calc.se) {
   foreach(i = 1:k, .packages = "poLCA") %do%
     poLCA(formula, data, nclass = i,
-          maxiter = maxiter, nrep = nrep)
+          maxiter = 1000, graphs = FALSE,
+          tol = 1e-10, na.rm = TRUE,
+          probs.start = NULL, nrep = 1,
+          verbose = TRUE, calc.se = TRUE)
 }
 
