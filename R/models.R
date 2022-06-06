@@ -16,7 +16,8 @@
 #' @param nrep Number of times that model should be estimated using different starting values
 #'
 #' @return A list
-#' @export
+#' @export poLCA
+#' @export foreach
 #'
 #' @examples
 #' Estimate LC models with 1,2,3 and 4 classes
@@ -29,8 +30,8 @@ models <- function(formula, data, k,
                    tol, na.rm,
                    probs.start, nrep,
                    verbose, calc.se) {
-  foreach(i = 1:k, .packages = "poLCA") %do%
-    poLCA(formula, data, nclass = i,
+  foreach::foreach(i = 1:k, .packages = "poLCA") %do%
+  poLCA::poLCA(formula, data, nclass = i,
           maxiter = 1000, graphs = FALSE,
           tol = 1e-10, na.rm = TRUE,
           probs.start = NULL, nrep = 1,
