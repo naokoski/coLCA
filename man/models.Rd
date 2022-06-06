@@ -9,14 +9,26 @@ outputs the result as a list
 user needs to define the model, maximum iterations and number of repetitions
 Estimate required LC models with different number of classes}
 \usage{
-models(data, k, formula, maxiter, nrep)
+models(
+  formula,
+  data,
+  k,
+  maxiter,
+  graphs,
+  tol,
+  na.rm,
+  probs.start,
+  nrep,
+  verbose,
+  calc.se
+)
 }
 \arguments{
+\item{formula}{The LC model (as documented in poLCA)}
+
 \item{data}{The dataset used}
 
 \item{k}{The maximum number of classes required}
-
-\item{formula}{The LC model (as documented in poLCA)}
 
 \item{maxiter}{The maximum number of iterations}
 
