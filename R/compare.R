@@ -46,7 +46,7 @@ compare_clases <- function(data) {
   #### Add row so can cbind
   lrt_table <- rbind(c(0,0,0,0,0), lrt_table)
 
-  #### Combine tables and save
+  #### Combine tables and return combined table
   comparison_table <- cbind(indicies_table, lrt_table) %>%
     select(c("NumberOfClasses", "AIC", "cAIC", "BIC", "aBIC", "Entropy", "SmallerClassSize",
              "Comparison_Classes", "LMR_Lik_Ratio", "LMRdf", "pvalue"))
