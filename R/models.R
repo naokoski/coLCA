@@ -9,11 +9,21 @@
 
 #' Estimate required LC models with different number of classes
 #'
+#' @param formula The latent class model (as documented in poLCA)
 #' @param data The dataset used
 #' @param k The maximum number of classes required
-#' @param formula The LC model (as documented in poLCA)
 #' @param maxiter The maximum number of iterations
+#' @param graphs Shall the output include graphs?
+#' @param tol Tolerance
+#' @param na.rm Remove missing values?
+#' @param probs.start If starting values are to be entered manually
 #' @param nrep Number of times that model should be estimated using different starting values
+#' @param verbose NOT SURE CHECK
+#' @param calc.se Calculate standard errors?
+#'
+#' @import poLCA
+#' @importFrom foreach %do%
+#'
 #'
 #' @return A list
 #'
@@ -28,11 +38,11 @@ models <- function(formula, data, k,
                    tol, na.rm,
                    probs.start, nrep,
                    verbose, calc.se) {
-  foreach::foreach(i = 1:k, .packages = "poLCA") %do%
-  poLCA::poLCA(formula, data, nclass = i,
-          maxiter = 1000, graphs = FALSE,
-          tol = 1e-10, na.rm = TRUE,
-          probs.start = NULL, nrep = 1,
-          verbose = TRUE, calc.se = TRUE)
+  i <- NULL
+  foreach::foreach(i = 1:k, .packages = "poLCA") %do% {
+    poLCA::poLCA(formula, data, nclass = i, maxiter = 1000, graphs = FALSE,
+                 tol = 1e-10, na.rm = TRUE, probs.start = NULL, nrep = 1,
+                 verbose = TRUE, calc.se = TRUE)
+    }
 }
 

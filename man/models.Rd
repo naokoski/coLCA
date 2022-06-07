@@ -24,7 +24,7 @@ models(
 )
 }
 \arguments{
-\item{formula}{The LC model (as documented in poLCA)}
+\item{formula}{The latent class model (as documented in poLCA)}
 
 \item{data}{The dataset used}
 
@@ -32,7 +32,19 @@ models(
 
 \item{maxiter}{The maximum number of iterations}
 
+\item{graphs}{Shall the output include graphs?}
+
+\item{tol}{Tolerance}
+
+\item{na.rm}{Remove missing values?}
+
+\item{probs.start}{If starting values are to be entered manually}
+
 \item{nrep}{Number of times that model should be estimated using different starting values}
+
+\item{verbose}{NOT SURE CHECK}
+
+\item{calc.se}{Calculate standard errors?}
 }
 \value{
 A list

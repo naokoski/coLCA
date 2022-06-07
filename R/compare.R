@@ -1,6 +1,8 @@
-#'
+#' @import tidyLPA
+#' @importFrom magrittr %>%
 
 compare_clases <- function(data) {
+  i <- NULL
   entropy<-function (p) sum(-p*log(p)) #to assess the quality of classification
   indicies_table <- data.frame(NumberOfClasses=0, AIC = 0, BIC=0,
                           Log_lik=0, Gsq = 0, Chisq = 0, df = 0,

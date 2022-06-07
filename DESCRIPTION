@@ -14,12 +14,13 @@ Description: This package adds new and convenience functions to the
     latent class models required by the user and outputs a comparison
     table with model selection statistics and functions that create spider
     or line charts using the item response probabilities.
-License: `use_mit_license()`, `use_gpl3_license()`
+License: use_mit_license()
 URL: https://github.com/naokoski/coLCA
 BugReports: https://github.com/naokoski/coLCA/issues
 Imports:
     dplyr,
-    foreach
+    foreach,
+    magrittr
 Depends:
     poLCA,
     tidyLPA (>= 1.0.5)
