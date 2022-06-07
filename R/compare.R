@@ -27,7 +27,7 @@ compare_clases <- function(data) {
                           LMRdf=0, pvalue=0)
   for(i in 1:(length(data)-1)){
     lrt <-
-      calc_lrt(n = data[[i]]$Nobs,#sample size
+      tidyLPA::calc_lrt(n = data[[i]]$Nobs,#sample size
                null_ll =  data[[i]]$llik, #LL of the null model
                null_param = data[[i]]$npar, #no. of parameters of null model
                null_classes = i, #no. of classes of null model
@@ -48,8 +48,9 @@ compare_clases <- function(data) {
 
   #### Combine tables and return combined table
   comparison_table <- cbind(indicies_table, lrt_table) %>%
-    select(c("NumberOfClasses", "AIC", "cAIC", "BIC", "aBIC", "Entropy", "SmallerClassSize",
-             "Comparison_Classes", "LMR_Lik_Ratio", "LMRdf", "pvalue"))
+    dplyr::select(c("NumberOfClasses", "AIC", "cAIC", "BIC", "aBIC", "Entropy",
+                    "SmallerClassSize", "Comparison_Classes", "LMR_Lik_Ratio",
+                    "LMRdf", "pvalue"))
 
   return(comparison_table)
 }
