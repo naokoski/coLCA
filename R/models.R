@@ -16,8 +16,6 @@
 #' @param nrep Number of times that model should be estimated using different starting values
 #'
 #' @return A list
-#' @export poLCA
-#' @export foreach
 #'
 #' @examples
 #' Estimate LC models with 1,2,3 and 4 classes
