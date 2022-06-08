@@ -14,7 +14,7 @@ Description: This package adds new and convenience functions to the
     latent class models required by the user and outputs a comparison
     table with model selection statistics and functions that create spider
     or line charts using the item response probabilities.
-License: use_mit_license()
+License: MIT + file LICENSE
 URL: https://github.com/naokoski/coLCA
 BugReports: https://github.com/naokoski/coLCA/issues
 Imports:

@@ -1,4 +1,4 @@
-#' Estimate LC models with different number of classes
+#' Estimate latent class models with different number of classes
 
 
 #' this function takes the maximum number of classes one wants to run
@@ -28,7 +28,7 @@
 #' @return A list
 #'
 #' @examples
-#' Estimate LC models with 1,2,3 and 4 classes
+#' Estimate latent class models with 1,2,3 and 4 classes
 #' Each model to iterate up to 5,000 times and
 #' repeated 10 times.
 #' models(data, 4, f, 5000, 10)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/models.R
 \name{models}
 \alias{models}
-\title{Estimate LC models with different number of classes
+\title{Estimate latent class models with different number of classes
 this function takes the maximum number of classes one wants to run
 then runs models from 1 class to the maximum amount of classes
 outputs the result as a list
@@ -50,7 +50,7 @@ models(
 A list
 }
 \description{
-Estimate LC models with different number of classes
+Estimate latent class models with different number of classes
 this function takes the maximum number of classes one wants to run
 then runs models from 1 class to the maximum amount of classes
 outputs the result as a list
@@ -58,7 +58,7 @@ user needs to define the model, maximum iterations and number of repetitions
 Estimate required LC models with different number of classes
 }
 \examples{
-Estimate LC models with 1,2,3 and 4 classes
+Estimate latent class models with 1,2,3 and 4 classes
 Each model to iterate up to 5,000 times and
 repeated 10 times.
 models(data, 4, f, 5000, 10)
