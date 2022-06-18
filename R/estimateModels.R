@@ -1,10 +1,12 @@
 #' Estimate latent class models with different number of classes
 
 
-#' this function takes the maximum number of classes one wants to run
-#' then runs models from 1 class to the maximum amount of classes
-#' outputs the result as a list
-#' user needs to define the model, maximum iterations and number of repetitions
+#' This is a convenience function, which uses the function poLCA()
+#' from the poLCA package to estimate latent class models
+#' with a user defined maximum number of classes (k).
+#' The function will estimate latent class models of 1:k classes.
+#' The output is a list, each element of which is the poLCA() output object
+#' (also a list) for each of the latent class models estimated.
 
 
 #' Estimate required LC models with different number of classes
@@ -31,7 +33,9 @@
 #' Estimate latent class models with 1,2,3 and 4 classes
 #' Each model to iterate up to 5,000 times and
 #' repeated 10 times.
-#' models(data, 4, f, 5000, 10)
+#' data(election)
+#' f <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB) ~ 1
+#' lc_models <- estimateModels(formula = f, data = election, k = 4, maxiter = 5000, nrep = 10)
 
 estimateModels <- function(formula, data, k,
                    maxiter, graphs,

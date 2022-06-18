@@ -1,6 +1,34 @@
+#' Create model selection statistics table
+
+
+#' This is a convenience function, which uses the output of
+#' the estimateModels() function from this package, to create
+#' a table showing the model selection statistics for each of
+#' the models estimated using the estimateModels() function.
+#' In addition to the model selection statistics calculated through
+#' poLCA(), this function calculates the
+#' consistent Akaike Information criterion (cAIC) and the
+#' sample-adjusted Bayesian Information Criterion (aBIC) as well
+#' as the Lo-Mendell-Rubin Likelihood Ratio Test.
+
+#' @param data the output of the estimateModels() function
+#'
 #' @import tidyLPA
 #' @import dplyr
 #' @importFrom magrittr %>%
+#'
+#' @return A dataframe
+#'
+#' @examples
+#' Display model selection statistics for
+#' latent class models with 1,2,3 and 4 classes
+#' lc_stats <- compareModels(lc_models)
+
+
+
+
+
+
 
 compareModels <- function(data) {
   i <- NULL
@@ -55,9 +83,9 @@ compareModels <- function(data) {
                     "AIC", "cAIC", "BIC", "aBIC", "Entropy",
                     "Smallest class size (%)" = "SmallerClassSize",
                     "Comparing models with number of classes:" = "Comparison_Classes",
-                    "Lo-Mendel-Rubin Likelihood Ratio" = "LMR_Lik_Ratio",
-                    "Lo-Mendel-Rubin degrees of freedom" = "LMRdf",
-                    "Lo-Mendel-Rubin p-value" = "pvalue"))
+                    "Lo-Mendell-Rubin Likelihood Ratio" = "LMR_Lik_Ratio",
+                    "Lo-Mendell-Rubin degrees of freedom" = "LMRdf",
+                    "Lo-Mendell-Rubin p-value" = "pvalue"))
 
   return(comparison_table)
 }
