@@ -1,19 +1,20 @@
 Type: Package
 Package: coLCA
-Title: Companion Package to 'poLCA'
+Title: Convenience functions to complement package 'poLCA'
 Version: 0.1.0
 Authors@R: 
     person("Naoko", "Skiada", , "naoko.skiada@kcl.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-8575-9846"))
 Maintainer: The package maintainer <naoko.skiada@kcl.ac.uk>
-Description: This package adds new and convenience functions to the
-    'poLCA' package.  New functions: calculations of the consistent Akaike
+Description: This package adds convenience functions to the
+    'poLCA' package as well as some additional statistics.  
+    New statistics: calculations of the consistent Akaike
     Information Criterion (cAIC), sample-adjusted Bayesian Information
-    Criterion (aBIC), entropy and Lo-Mendel-Rubin Likelihood Ratio tests
-    (LMR LRT). Convenicence functions: a function that estimates all
-    latent class models required by the user and outputs a comparison
-    table with model selection statistics and functions that create spider
-    or line charts using the item response probabilities.
+    Criterion (aBIC), and the Lo-Mendel-Rubin Likelihood Ratio test
+    (LMR LRT). Convenicence functions: a function that estimates all the
+    latent class models with different number of classes required by the user.
+    A function that takes this output and creates a comparison
+    table of model selection statistics.
 License: MIT + file LICENSE
 URL: https://github.com/naokoski/coLCA
 BugReports: https://github.com/naokoski/coLCA/issues
