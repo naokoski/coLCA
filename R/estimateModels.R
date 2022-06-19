@@ -11,23 +11,20 @@
 
 #' Estimate required LC models with different number of classes
 #'
-#' @param formula The latent class model (as documented in poLCA)
-#' @param data The dataset used
-#' @param k The maximum number of classes required
-#' @param maxiter The maximum number of iterations
-#' @param graphs Shall the output include graphs?
-#' @param tol Tolerance
-#' @param na.rm Remove missing values?
-#' @param probs.start If starting values are to be entered manually
-#' @param nrep Number of times that model should be estimated using different starting values
-#' @param verbose NOT SURE CHECK
-#' @param calc.se Calculate standard errors?
+#' @param formula The latent class model (as documented in the poLCA package).
+#' @param data A dataframe as documented in the poLCA package.
+#' @param k The maximum number of classes required.
+#' @param ... All other poLCA() arguments as documented in the poLCA package.
 #'
 #' @import poLCA
 #' @importFrom foreach %do%
 #'
 #'
-#' @return A list
+#' @return estimateModels returns a list of poLCA objects (that are also lists).
+#'     Each element of the list is the poLCA object for each the latent class
+#'     models estimated (i.e. the parameter estimates and other model information
+#'     of the latent class models with one, two, etc classes). Please see package
+#'     poLCA for full documentation.
 #'
 #' @examples
 #' Estimate latent class models with 1,2,3 and 4 classes

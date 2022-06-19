@@ -11,17 +11,23 @@
 #' sample-adjusted Bayesian Information Criterion (aBIC) as well
 #' as the Lo-Mendell-Rubin Likelihood Ratio Test.
 
-#' @param data the output of the estimateModels() function
+#' @param data The output of the estimateModels() function
 #'
 #' @import tidyLPA
 #' @import dplyr
 #' @importFrom magrittr %>%
 #'
-#' @return A dataframe
+#' @return A dataframe containing the model selection statistics for each
+#'     of the latent class models estimated using the estimateModels() function.
+#'     Each model (i.e. a model with one, two, etc. classes) occupies one row,
+#'     and each column is a separate statistic.
 #'
 #' @examples
 #' Display model selection statistics for
 #' latent class models with 1,2,3 and 4 classes
+#' data(election)
+#' f <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB) ~ 1
+#' lc_models <- estimateModels(formula = f, data = election, k = 4, maxiter = 5000, nrep = 10)
 #' lc_stats <- compareModels(lc_models)
 
 
