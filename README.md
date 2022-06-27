@@ -57,7 +57,8 @@ This is a basic example which shows you how to solve a common problem:
 #library(coLCA)
 
 ##' Estimate latent class models with 1,2,3 and 4 classes
-##' Each model to iterate up to 5,000 times and repeated 10 times.
+##' Each model to iterate up to 5,000 times and the model estimated 10 times,
+##' using different start values each time.
 ##' 
 ##' data(election)
 ##' 
