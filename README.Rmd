@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of coLCA is to create some additional functionality for the poLCA package. It provides functions to calculate additional information criteria (consistent AIC and sample-adjusted BIC), a different measure of entropy. Also, a convenience function to estimate all required LC models (with all user-defined number of classes) and output the model selection criteria in a tidy table. 
+The goal of coLCA is to create some additional functionality for the poLCA package. It provides convenience functions to for estimating all the required models from a single function call, which also calculates additional information criteria (consistent AIC and sample-adjusted BIC), not provided in poLCA. A second function extracts all the model selectcion statistics and outputs them as a dataframe for easier comparison, including the Lo-Mendell-Rubin Likelihood Ratio Test that is not available in poLCA.  
 
 ## Installation
 
@@ -38,22 +38,15 @@ There are a number of information criteria addtitional to the most commonly know
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
+
 #library(coLCA)
-## basic example code
+
+## Estimate latent class models with 1,2,3 and 4 classes
+## Each model to iterate up to 5,000 times and repeated 10 times.
+## data(election)
+## Define the model (the example is of a latent class model with no covariates)
+## f <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB) ~ 1
+## The argument k is the only argument not included in the poLCA() function. All other arguments are the same.
+## lc_models <- estimateModels(formula = f, data = election, k = 4, maxiter = 5000, nrep = 10)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
