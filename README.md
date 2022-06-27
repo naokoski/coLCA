@@ -26,7 +26,7 @@ coLCA provides convenience functions for estimating all the required
 latent class models from a single function call, which also calculates
 additional information criteria (consistent AIC and sample-adjusted
 BIC), not provided in poLCA. A second function extracts all the model
-selectcion statistics and outputs them as a dataframe for easy
+selection statistics and outputs them as a dataframe for easy
 comparison; the function also compares each model of k classes to the
 model of k+1 classes using the Lo-Mendell-Rubin Likelihood Ratio Test
 that is not available in poLCA. The Lo-Mendell-Rubin Likelihood Ratio
@@ -57,7 +57,7 @@ This is a basic example which shows you how to solve a common problem:
 #library(coLCA)
 
 ##' Estimate latent class models with 1,2,3 and 4 classes
-##' Each model to iterate up to 5,000 times and the model estimated 10 times,
+##' Each model to iterate up to 5,000 times and estimated 10 times
 ##' using different start values each time.
 ##' 
 ##' data(election)

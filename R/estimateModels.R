@@ -57,7 +57,7 @@
 #'
 #' @examples
 #' Estimate latent class models with 1,2,3 and 4 classes
-#' Each model to iterate up to 5,000 times and the model estimated 10 times,
+#' Each model to iterate up to 5,000 times and estimated 10 times
 #' using different start values each time.
 #' data(election)
 #' f <- cbind(MORALG,CARESG,KNOWG,LEADG,DISHONG,INTELG,MORALB,CARESB,KNOWB,LEADB,DISHONB,INTELB) ~ 1
