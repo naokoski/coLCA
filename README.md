@@ -29,7 +29,8 @@ BIC), not provided in poLCA. A second function extracts all the model
 selectcion statistics and outputs them as a dataframe for easy
 comparison; the function also compares each model of k classes to the
 model of k+1 classes using the Lo-Mendell-Rubin Likelihood Ratio Test
-that is not available in poLCA.
+that is not available in poLCA. The Lo-Mendell-Rubin Likelihood Ratio
+Test is estimated using the tidyLPA package.
 
 It is common, when performing Latent Class Analysis, that the researcher
 will estimate a number of models each with an additional class, which
@@ -43,10 +44,10 @@ be extracted from each model output object and tabulated in order to be
 compared and used in publications. This package provides convenience
 functions to improve this workflow and outputs. One function allows the
 researcher to provide the maximum number of classes they wish to
-estimate and the function will return a list containing all the model
-outputs between one and the maximum number of classes set by the
-researcher. A second function takes this output, extracts all the
-necessary statistics and outputs them as a dataframe.
+estimate, returning a list containing all the model outputs between one
+and the maximum number of classes set by the researcher. A second
+function takes this output, extracts all the necessary statistics and
+outputs them as a dataframe.
 
 ## Example
 
@@ -71,3 +72,24 @@ This is a basic example which shows you how to solve a common problem:
 ##' 
 ##' lc_stats <- compareModels(lc_models)
 ```
+
+## References
+
+Linzer, Drew A. and Jeffrey Lewis. 2013. “poLCA: Polytomous Variable
+Latent Class Analysis.” R package version 1.4.
+<http://dlinzer.github.com/poLCA>.
+
+Linzer DA, Lewis JB (2011). “poLCA: An R Package for Polytomous Variable
+Latent Class Analysis.” Journal of Statistical Software, 42(10), 1–29.
+<https://www.jstatsoft.org/v42/i10/>.
+
+Rosenberg JM, Beymer PN, Anderson DJ, Van Lissa CJ, Schmidt JA (2018).
+“tidyLPA: An R Package to Easily Carry Out Latent Profile Analysis (LPA)
+Using Open-Source or Commercial Software.” Journal of Open Source
+Software, 3(30), 978. doi: 10.21105/joss.00978,
+<https://joss.theoj.org/papers/10.21105/joss.00978>.
+
+Nylund, K. L., Asparouhov, T., & Muthén, B. O. (2007). Deciding on the
+number of classes in latent class analysis and growth mixture modeling:
+A Monte Carlo simulation study. Structural equation modeling: A
+multidisciplinary Journal, 14(4), 535-569.
